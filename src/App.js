@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,
-  Text,
-  View
+  View,
+  StyleSheet
 } from 'react-native';
+
+import Header from './components/Header'
+import TodoList from './components/TodoList'
+import Footer from './components/Footer'
 
 export default class App extends Component {
   render() {
     return (
-      <View style={style.rootContainer}>
-        <View style={style.displayContainer}>
-          <Text>Hello App component.</Text>
-        </View>
+      <View style={styles.root}>
+        <Header />
+        <TodoList />
+        <Footer />
       </View>
     )
   }
 }
 
-const style = StyleSheet.create({
-  rootContainer: {
+const styles = StyleSheet.create({
+  root: {
     flex: 1,
-    backgroundColor: 'blue',
-  },
-  displayContainer: {
-    backgroundColor: 'green',
+    marginTop: 20,
+    backgroundColor: 'ghostwhite',
   }
 })
